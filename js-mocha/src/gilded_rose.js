@@ -16,13 +16,10 @@ class Shop {
     this.items = items;
   }
   updateQuality() {
-    for (var i = 0; i < this.items.length; i++) {
-      this.items[i].update()
-    }
-
-    return this.items;
+    return this.items.map(item => item.update())
   }
 }
+
 module.exports = {
   Item,
   GildedRose: Shop
